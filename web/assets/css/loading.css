@@ -1,0 +1,225 @@
+﻿@-webkit-keyframes loadBallsO {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    25% {
+        left: 50%;
+        -webkit-transform: rotateZ(359deg);
+    }
+
+    75% {
+        left: 50%;
+        -webkit-transform: rotateZ(0deg);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0;
+        -webkit-transform: rotateZ(0deg);
+    }
+}
+
+@keyframes loadBallsO {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    25% {
+        left: 50%;
+        -webkit-transform: rotateZ(359deg);
+    }
+
+    75% {
+        left: 50%;
+        -webkit-transform: rotateZ(0deg);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0;
+        -webkit-transform: rotateZ(0deg);
+    }
+}
+
+@-webkit-keyframes loadBalls {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    15% {
+        left: 40%;
+    }
+
+    85% {
+        left: 60%;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes loadBalls {
+    0% {
+        left: 0;
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    15% {
+        left: 50%;
+    }
+
+    85% {
+        left: 50%;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+.load-container {
+    width: 98%;
+    float: left;
+    position: relative;
+    left: 2%;
+    top: -10px;
+    display: none;
+}
+
+.load-container-round {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    height: 150px;
+    left: 0;
+    display: none;
+    transition:ease all 0.3s;
+    -moz-transition:ease all 0.3s;
+    -ms-transition:ease all 0.3s;
+    top: 0;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    z-index: 99999999999999999999;
+}
+
+.show {
+    display: block !important;
+}
+
+.load-image {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    -webkit-animation: loadBalls 4s ease-in-out 1s infinite;
+    -moz-animation: loadBalls 4s ease-in-out 1s infinite;
+    animation: loadBalls 4s ease-in-out 1s infinite;
+    background: rgb(90,155,155);
+    opacity: 0;
+}
+
+.load-image-round {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: absolute;
+    -webkit-animation: loadBallsO 4s ease-in-out 1s infinite;
+    -moz-animation: loadBallsO 4s ease-in-out 1s infinite;
+    animation: loadBallsO 4s ease-in-out 1s infinite;
+     background: rgb(30,125,125);
+     background: rgb(255,255,255);     
+    opacity: 0;
+    -webkit-transform: rotateZ(359deg);
+    -webkit-transform-origin: 50% -40px;
+    top: 50%;
+}
+
+.square .load-image-round, .square .load-image {
+    border-radius: 0;
+}
+
+.circle .load-image-round, .circle .load-image {
+    border-radius: 100%;
+}
+
+.load-image.d1, .load-image-round.d1 {
+    animation-delay: 0.301s !important;
+    -webkit-animation-delay: 0.301s !important;
+}
+
+.load-image.d2, .load-image-round.d2 {
+    animation-delay: 0.601s !important;
+    -webkit-animation-delay: 0.601s !important;
+}
+
+.load-image.d3, .load-image-round.d3 {
+    animation-delay: 0.9009999999999999s !important;
+    -webkit-animation-delay: 0.9009999999999999s !important;
+}
+
+.load-image.d4, .load-image-round.d4 {
+    animation-delay: 1.2009999999999998s !important;
+    -webkit-animation-delay: 1.2009999999999998s !important;
+}
+
+.load-image.d5, .load-image-round.d5 {
+    animation-delay: 1.501s !important;
+    -webkit-animation-delay: 1.501s !important;
+}
+
+.load-image.d6, .load-image-round.d6 {
+    animation-delay: 1.8009999999999997s !important;
+    -webkit-animation-delay: 1.8009999999999997s !important;
+}
+
+.load-image.d7, .load-image-round.d7 {
+    animation-delay: 2.101s !important;
+    -webkit-animation-delay: 2.101s !important;
+}
+
+.load-image.d8, .load-image-round.d8 {
+    animation-delay: 2.401s !important;
+    -webkit-animation-delay: 2.401s !important;
+}

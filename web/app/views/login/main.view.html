@@ -1,0 +1,12 @@
+<div class="loginmodal-container">
+	<h1>Fazer Login</h1><br>
+  <form ng-submit='login()'>
+	<select ng-required='true' ng-model='user.tipo_pessoa_id' class="form-control" ng-options='item.id as item.nome for item in tipo'>
+		<option value=""> -- Selecione o Tipo de Pessoa -- </option>
+	</select>
+	<br>
+	<input type="text" ng-required='true' name="user" ng-model='user.email' placeholder="Email">
+	<input type="password" ng-required='true'  name="pass" ng-model='user.senha' placeholder="Senha">
+	<input type="submit" name="login" class="login loginmodal-submit" value="Entrar">
+  </form>	
+</div>

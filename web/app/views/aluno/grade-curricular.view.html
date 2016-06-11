@@ -1,0 +1,41 @@
+<h4>Minha Grade Currícular</h4>
+<h5><strong> Curso:</strong> {{user.curso}}</h5>
+<table class="table package-table">
+
+	<thead>
+		<tr>
+			<th>
+				Currículo
+			</th>
+			<th>
+				Carga Horaria
+			</th>
+			<th>
+				Nota Final
+			</th>
+			<th>
+				Situação Final 
+			</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		
+		<tr ng-repeat='item in disciplinas'>
+			<td>
+				{{item.curriculo}}
+			</td>
+			<td>
+				{{item.carga_horaria}}
+			</td>
+			<td>
+				{{item.nota_final}}
+			</td>
+			<td>
+				{{item.situacao}}
+			</td>	
+		</tr>
+
+	</tbody>
+
+</table>

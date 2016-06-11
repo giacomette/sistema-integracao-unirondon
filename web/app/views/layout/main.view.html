@@ -1,0 +1,219 @@
+<header class='header-top'>
+
+	<div class="area-top">
+
+	    <div class="container-fluid"> 
+	        <div class="navbar-header">
+	            <button type="button" class="navbar-toggle" data-target=".sidebar-tab-menu">
+	                <i class="fa fa-bars fa-2x"></i> 
+	            </button>
+	            <a ui-sref='app.portais' class="logo navbar-brand">
+	                <h3>{{appName}}</h3>   
+	            </a>
+	        </div>
+	        <div class="collapse navbar-collapse"  ng-if='user'>
+	            <ul class="nav navbar-nav navbar-right">
+	      
+	                <li class="dropdown">
+	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"style='background:none !important; margin-top:5px; font-weight:normal; color:#fff'>                       
+	                        <span style='right:10px; top:-5px; position:relative'>
+	                        	{{user.nome}}
+	                        </span>
+	                        <span class="fa fa-cog fa-2x"></span>
+	                    </a>
+	                    <ul class="dropdown-menu">
+	                        <li>
+	                            <div class="navbar-login">
+	                                <div class="row">
+	                                    <div class="col-lg-4">
+	                                        <p class="text-center">
+	                                             
+	                                            <span class="glyphicon glyphicon-user icon-size"></span>
+
+	                                        </p>
+	                                    </div>
+	                                    <div class="col-lg-8">
+	                                        <p class="text-left">
+	                                        	<strong >
+	                                        		{{user.nome}}
+	                                        	</strong>
+	                                        </p>
+	                                        <p class="text-left small">
+	                                        {{user.email}}
+	                                        </p>
+	                                        
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </li>
+	                        <li class="divider"></li>
+	                        <li>
+	                            <div class="navbar-login navbar-login-session">
+	                                <div class="row">
+	                                    <div class="col-lg-12">
+	                                        <p>
+	                                            <a ng-click='logout()' class="btn btn-danger btn-block">Encerrar Sessão</a>
+	                                        </p>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </li>
+	                    </ul>
+	                </li>
+	            </ul>
+	           
+	        </div>
+	    </div>
+
+
+	</div>
+
+	<div ng-if='user'>
+
+	    <div class="container-fluid">	        
+
+	        <div class="col-sm-12 menu-principal-header">
+
+               <nav class="navbar navbar-default">
+				  <div class="container-fluid">
+				    <!-- Brand and toggle get grouped for better mobile display -->
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				    </div>
+
+				    <!-- Collect the nav links, forms, and other content for toggling -->
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      <ul class="nav navbar-nav">
+
+				        <li ui-sref-active='active'>
+				        	<a href="#" ui-sref='app.portais'>
+				        		<i class="fa fa-home"></i> 
+				        		<span> Inicio  </span>
+				        	</a>
+				        </li>
+
+				        <li>
+				        	<a href="#" ui-sref='app.aluno.notas'>
+				        		<i class="fa fa-edit"></i> 
+				        		<span> Minhas Notas </span>
+				        	</a>
+				        </li>	
+
+				        <li>
+				        	<a href="#" ui-sref='app.aluno.gradeCurricular'>
+				        		<i class="fa fa-university"></i> 
+				        		<span> Grade Curricular </span>
+				        	</a>
+				        </li>	
+
+				        <li>
+				        	<a href="#" ui-sref='app.aluno.horarioAula'>
+				        		<i class="fa fa-calendar-check-o"></i> 
+				        		<span> Horário de Aula </span>
+				        	</a>
+				        </li>
+
+				        <li>
+				        	<a href="#" ui-sref='app.aluno.calendario'>
+				        		<i class="fa fa-calendar"></i> 
+				        		<span> Avisos e Calendário </span>
+				        	</a>
+				        </li>				      
+
+				      </ul>
+
+				    </div><!-- /.navbar-collapse -->
+				  </div><!-- /.container-fluid -->
+				</nav>
+	        </div>
+	    </div>
+	</div>
+
+
+</header>
+
+<app-body>
+
+	<section id='layout'>
+
+        <div class="container">
+
+            <div class='row'>
+
+                <div class="col-lg-12 conteudo-principal material">
+
+                	<div class="row">
+                	
+	                    <div class="tab-content" >
+
+	                        <ui-view name="content"></ui-view>
+
+
+	                        <hr>
+	                        
+		                    <div class="row">
+
+		                    	<p class="text-center">
+		                    	Todos os direitos reservados aos acadêmicos de Ciências da Computação 4º Semestre do período de 2016/1
+		                    	</p>
+
+		                    </div>
+		                       
+	                    </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</app-body>
+
+
+
+
+
+<div class="modal fade" id="modal-template" tabindex="-1" role="dialog" aria-labelledby="Janela" aria-hidden="true">
+    <div class="modal-dialog" style="margin-bottom: 0px;">
+        <div class="modal-content">
+            <div class="modal-header" style="padding: 4px 15px;">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body content">
+
+            </div>
+            <div class="modal-footer" style="padding: 10px 20px;">
+                <button type="button" class="btn btn-primary" data-dismiss="modal"> <span class=""><i class='glyphicon glyphicon-remove'></i> Fechar </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-container"></div>
+
+<div id="linear-loading" class="load-container" style="z-index: 1000;">
+    <div class="load-image d1"></div>
+    <div class="load-image d2"></div>
+    <div class="load-image d3"></div>
+    <div class="load-image d4"></div>
+    <div class="load-image d5"></div>
+</div>
+
+<div class="load-container-round" id="loading">
+    <div class="load-image-round d1"></div>
+    <div class="load-image-round d2"></div>
+    <div class="load-image-round d3"></div>
+    <div class="load-image-round d4"></div>
+    <div class="load-image-round d5"></div>
+    <div class="load-image-round d6"></div>
+</div>

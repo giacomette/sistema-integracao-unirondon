@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+	<meta charset="utf-8">
+	<title>{{title || "Página Inicial"}}</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="web/assets/css/loading.css">
+	<link rel="stylesheet" type="text/css" href="web/assets/css/style.css">
+</head>
+<body>
+
+
+<main>
+
+ 	<application ui-view></application>
+
+
+
+
+
+	<!-- scripts -->
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>	
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="web/assets/js/modal.js"></script>
+	<script type="text/javascript" src="web/assets/js/promiseme.js"></script>
+	<script type="text/javascript" src="web/app/app.js"></script>
+	<script type="text/javascript" src="web/app/routes/routes.js"></script>
+	<script type="text/javascript" src="web/app/services/aluno-service.factory.js"></script>
+	<script type="text/javascript" src="web/app/services/login-service.factory.js"></script>
+	<script type="text/javascript" src="web/app/services/request-service.factory.js"></script>
+	<script type="text/javascript" src="web/app/controllers/loginCtrl.js"></script>
+	<script type="text/javascript" src="web/app/controllers/alunoCtrl.js"></script>
+	<script type="text/javascript" src="web/app/controllers/portaisCtrl.js"></script>
+
+</main>
+
+</body>
+</html>
